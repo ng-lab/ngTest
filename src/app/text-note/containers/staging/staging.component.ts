@@ -37,7 +37,6 @@ export class StagingComponent implements OnInit {
   }
 
   public onSelect(note) {
-    console.log('note selected::', note);
     this.selectedNote = note;
     this.newNote = false;
 //     this.router.navigate( ['text-note', { outlets: { detail: null } } ]);
