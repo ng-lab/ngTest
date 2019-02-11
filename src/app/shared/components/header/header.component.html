@@ -1,0 +1,10 @@
+<div class="wrapper">
+  <div class="action_buttons">
+      <button class="info" (click)="onChangeType('grid')">Grid</button>
+      <button class="warning" (click)="onChangeType('list')">List</button>
+  </div>
+  <div class="title">
+    <h3>{{ type }}</h3>
+  </div>
+  <button (click)="addNewTask()" class="button primary">New Task</button>
+</div>

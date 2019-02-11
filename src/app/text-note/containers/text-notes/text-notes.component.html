@@ -1,0 +1,5 @@
+<ul #listContainer>
+  <li *ngFor="let note of notes" (click)="onSelect(note)">
+    {{ note.description }}
+  </li>
+</ul>

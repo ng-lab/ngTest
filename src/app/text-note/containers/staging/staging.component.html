@@ -1,0 +1,18 @@
+<div class="content_area">
+  <header [type]="'Text Note'"
+  (changeType)="onChangeType($event)"
+  (newNote)="onNewNote($event)"
+  ></header>
+
+  <div class="container">
+      <text-notes *ngIf="notes.length > 0" [styleType]="styleType" [notes]="notes" (select)="onSelect($event)"></text-notes>
+      <div class="action-wrapper">
+        <create-note (add)="onNoteAdd($event)" *ngIf="newNote"></create-note>
+        <!-- <router-outlet name="detail"></router-outlet> -->
+        <note-details [note]="selectedNote" *ngIf="!newNote && selectedNote"></note-details>
+      </div>
+  </div>
+
+</div>
+
+
